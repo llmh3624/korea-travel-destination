@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script
+      src="https://kit.fontawesome.com/9a3becb4d0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    :root {
+      --primary-color: #00479f;
+      --tertiary-color: #3359ba;
+      --secondary-color: #cd2e3a;
+      --accent-color: white;
+
+      --default-font-family: "Bebas Neue", cursive;
+      --accent-font-family: "Roboto Slab", serif;
+    }
+
+    body {
+      font-family: var(--default-font-family);
+    }
+
+    h1 {
+      font-size: 45px;
+    }
+
+    h2 {
+      font-size: 50px;
+      color: var(--primary-color);
+      margin: 0px;
+    }
+
+    h3 {
+      font-size: 30px;
+      color: var(--accent-color);
+    }
+
+    h4 {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-family: var(--accent-font-family);
+      font-size: 20px;
+      font-weight: 400;
+      text-align: center;
+      margin: 0px;
+    }
+
+    .nav {
+      background-color: #121d13;
+    }
+
+    .nav-link {
+      color: var(--accent-color);
+      font-size: 25px;
+    }
+
+    .nav-link:hover {
+      color: var(--secondary-color);
+    }
+
+    .hero {
+      background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/039/original/southkorea.png?1683043660);
+      background-position: center;
+      background-size: cover;
+      padding: 200px;
+      margin: 0px;
+      margin-bottom: 20px;
+
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    .hero.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    header {
+      color: var(--accent-color);
+      font-size: 100px;
+      background-color: rgba(201, 201, 201, 0.3);
+    }
+
+    .map-section {
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+
+    .map-south-korea {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .location-information {
+      margin: auto;
+      width: 50%;
+      padding: 10px;
+    }
+
+    .location-information p {
+      text-align: left;
+      padding-right: 100px;
+    }
+
+    .travel-reasons {
+      background-color: var(--primary-color);
+      padding: 10px;
+    }
+
+    .travel-reasons h3 {
+      color: var(--accent-color);
+      margin-top: 20px;
+    }
+
+    .travel-reasons ul {
+      font-family: var(--accent-font-family);
+      font-size: 15px;
+      color: var(--accent-color);
+      list-style: none;
+      padding: 5px;
+    }
+
+    .travel-reasons li {
+      padding: 5px;
+    }
+
+    .culture-section {
+      padding: 20px;
+      margin: 0px;
+    }
+
+    .culture-information {
+      border: 1px solid var(--secondary-color);
+      padding: 10px;
+    }
+
+    .culture-information h2 {
+      color: var(--secondary-color);
+    }
+
+    .culture-places {
+      flex: 1;
+      margin: 10px;
+    }
+
+    .culture-place {
+      margin: 10px;
+    }
+
+    .culture-places h4 {
+      color: var(--secondary-color);
+    }
+
+    .culture-places p {
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    .image-place img {
+      border-radius: 2px;
+    }
+
+    #food {
+      background-color: var(--primary-color);
+    }
+
+    .food-section {
+      padding: 20px;
+    }
+
+    .food-information {
+      border: 1px solid var(--accent-color);
+      margin: 10px;
+    }
+
+    .food-information h2 {
+      color: var(--accent-color);
+      margin: 10px;
+    }
+
+    .food-information p {
+      color: var(--accent-color);
+      font-weight: 300;
+      margin: 10px;
+    }
+
+    .main-dish {
+      margin: 20px 0;
+    }
+
+    .cuisine-dishes {
+      margin: 20px;
+    }
+
+    .cuisine-dish h4 {
+      color: var(--accent-color);
+      border: 1px solid var(--tertiary-color);
+    }
+
+    .cuisine-dish p {
+      color: var(--accent-color);
+      font-size: 14px;
+      font-weight: 200;
+    }
+    .cuisine-dish img {
+      border-radius: 5px;
+    }
+  </style>
+  <body>
+    <div>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#location">LOCATION</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#reasons">REASONS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#culture">CULTURE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#food">FOOD</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero text-center">
+      <header>SOUTH KOREA</header>
+    </div>
+
+    <div class="text-center">
+      <h1>
+        🇰🇷 A fascinating country that blends ancient traditions with modern
+        technology 🇰🇷
+      </h1>
+    </div>
+
+    <div id="location">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 map-section">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/041/original/map.png?1683043720"
+              class="map-south-korea"
+              alt="South Korea Map"
+              width="400"
+              height="90%"
+            />
+          </div>
+          <div class="col-6 location-information">
+            <h2>LOCATION</h2>
+            <p>
+              South Korea is a country located in East Asia, sharing a land
+              border with North Korea to the north, and surrounded by the Sea of
+              Japan to the east, the Yellow Sea to the west, and the Korea
+              Strait to the south. Its capital and largest city is Seoul, and it
+              is located on the southern half of the Korean Peninsula.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="reasons" class="travel-reasons text-center">
+      <h3>Why Should South Korea be Your Next Travel Destination?</h3>
+      <ul>
+        <li>Rich culture and history, including UNESCO World Heritage Sites</li>
+        <li>
+          Delicious and varied cuisine, with must-try dishes like Korean
+          barbecue
+        </li>
+        <li>
+          Modern and vibrant cities with excellent shopping, nightlife, and
+          entertainment options
+        </li>
+        <li>
+          Beautiful natural scenery, including beaches, mountains, and national
+          parks
+        </li>
+        <li>Convenient and safe transportation and a low crime rate</li>
+      </ul>
+    </div>
+
+    <div id="culture" class="container">
+      <div class="row culture-section text-center">
+        <div class="col culture-information">
+          <h2>CULTURE</h2>
+          <p>
+            South Korea has a rich cultural heritage, which is evident in its
+            ancient temples, palaces, and traditional villages
+          </p>
+
+          <div class="row culture-places">
+            <div class="col culture-place">
+              <h4>SEOUL</h4>
+              <p>
+                As the capital and largest city in South Korea, Seoul offers a
+                wide range of cultural experiences, including historic palaces,
+                museums, and traditional markets. Some must-visit cultural
+                attractions include
+                <strong>Gyeongbokgung Palace</strong>,
+                <strong>Changdeokgung Palace</strong>,
+                <strong>the National Museum of Korea</strong>, and
+                <strong>Insadong antique street</strong>.
+              </p>
+            </div>
+            <div class="col culture-place">
+              <h4>JEONJU</h4>
+              <p>
+                Located in the southwest region of the country, Jeonju is known
+                for its traditional culture and is often referred to as the
+                "spiritual capital of Korea." Visitors can explore the
+                <strong>Jeonju Hanok Village</strong>, where traditional Korean
+                houses and cultural experiences are on display.
+              </p>
+            </div>
+            <div class="col culture-place">
+              <h4>GYEONGJU</h4>
+              <p>
+                This city was the capital of the ancient Silla Kingdom and has a
+                wealth of historical and cultural sites, including UNESCO World
+                Heritage Sites such as
+                <strong>Bulguksa Temple</strong> and
+                <strong> SeokguramGrotto </strong>. Gyeongju is also home to the
+                <strong>Gyeongju National Museum</strong>, which features
+                exhibits on Korean history and culture.
+              </p>
+            </div>
+            <div class="col culture-place">
+              <h4>BUSAN</h4>
+              <p>
+                As the second-largest city in South Korea, Busan offers a unique
+                blend of traditional and modern culture. Visitors can explore
+                the <strong>Gamcheon Culture Village</strong>, a hillside
+                neighborhood with colorful houses and art installations, and
+                visit the <strong>Busan Museum of Art</strong>, which showcases
+                contemporary Korean art.
+              </p>
+            </div>
+            <div class="col culture-place">
+              <h4>ANDONG</h4>
+              <p>
+                This city is known for its traditional culture, including its
+                famous mask dance, <strong>Hahoe Folk Village</strong>, and
+                traditional cuisine. Visitors can also experience Korean tea
+                ceremonies and try their hand at traditional crafts like pottery
+                and paper-making.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="row culture-places">
+                <div class="col image-place">
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/040/original/seoul.png?1683043691"
+                    alt="Seoul"
+                    width="200"
+                  />
+                </div>
+                <div class="col image-place">
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/043/original/jeonju.png?1683043746"
+                    alt="Jeonju"
+                    width="200"
+                  />
+                </div>
+                <div class="col image-place">
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/044/original/gyeongju.png?1683043759"
+                    alt="Gyeongyu"
+                    width="200"
+                  />
+                </div>
+                <div class="col image-place">
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/046/original/busan.png?1683043781"
+                    alt="Busan"
+                    width="200"
+                  />
+                </div>
+                <div class="col image-place">
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/047/original/andong.png?1683043788"
+                    alt="Andong"
+                    width="200"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="food">
+      <div class="container text-center">
+        <div class="row food-section">
+          <div class="col food-information">
+            <h2>FOOD</h2>
+            <p>
+              South Korean cuisine is known for its bold flavors, vibrant
+              colors, and diverse ingredients. Here are some popular South
+              Korean dishes you should try when visiting:
+            </p>
+
+            <div class="cuisine-dishes">
+              <div class="row main-dish">
+                <h3>MAIN-DISHES</h3>
+                <div class="col cuisine-dish">
+                  <h4>Korean Fried Chicken</h4>
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/060/original/17.png?1683043958"
+                    alt="Korean Fried Chicken"
+                    width="200"
+                  />
+                  <p>
+                    A crispy and juicy fried chicken dish coated in a sweet and
+                    spicy sauce
+                  </p>
+                </div>
+                <div class="col cuisine-dish">
+                  <h4>Bulgogi</h4>
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/061/original/18.png?1683043969"
+                    alt="Bulgogi"
+                    width="200"
+                  />
+                  <p>
+                    Thinly sliced beef marinated in a sweet and savory sauce,
+                    and grilled or stir-fried
+                  </p>
+                </div>
+
+                <div class="col cuisine-dish">
+                  <h4>Dakgalbi</h4>
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/062/original/19.png?1683043983"
+                    alt="Dakgalbi"
+                    width="200"
+                  />
+                  <p>
+                    A spicy stir-fried chicken dish made with vegetables and a
+                    spicy sauce
+                  </p>
+                </div>
+                <div class="col cuisine-dish">
+                  <h4>Haemul Pajeon</h4>
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/065/original/20.png?1683043997"
+                    alt="Haemul Pajeon"
+                    width="200"
+                  />
+                  <p>
+                    A savory pancake made with scallions and seafood such as
+                    shrimp or squid
+                  </p>
+                </div>
+                <div class="col cuisine-dish">
+                  <h4>Jjolmyeon</h4>
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/066/original/21.png?1683044012"
+                    alt="Jjolmyeon"
+                    width="200"
+                  />
+                  <p>
+                    A type of chewy, cold noodle dish that is often served with
+                    a spicy sauce and vegetables
+                  </p>
+                </div>
+              </div>
+
+              <div class="row main-dish">
+                <div class="col cuisine-dish">
+                  <h4>Galbi-tang</h4>
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/067/original/22.png?1683044024"
+                    alt="Galbi-tang"
+                    width="200"
+                  />
+                  <p>
+                    A beef short rib soup that is typically simmered for hours
+                    with various vegetables and spices
+                  </p>
+                </div>
+                <div class="col cuisine-dish">
+                  <h4>Sundubu-jjigae</h4>
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/068/original/23.png?1683044039"
+                    alt="Sundubu-jjigae"
+                    width="200"
+                  />
+                  <p>
+                    A spicy tofu stew that is typically served with rice and
+                    various side dishes
+                  </p>
+                </div>
+                <div class="col cuisine-dish">
+                  <h4>Samgyetang</h4>
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/069/original/24.png?1683044053"
+                    alt="Samgyetang"
+                    width="200"
+                  />
+                  <p>
+                    A chicken soup with ginseng, garlic, and other medicinal
+                    herbs and it is believed to have restorative properties
+                  </p>
+                </div>
+                <div class="col cuisine-dish">
+                  <h4>Kimchi-jjigae</h4>
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/070/original/25.png?1683044067"
+                    alt="Kimchi-jjigae"
+                    width="200"
+                  />
+                  <p>
+                    A spicy stew made with kimchi, pork, tofu, and other
+                    ingredients
+                  </p>
+                </div>
+                <div class="col cuisine-dish">
+                  <h4>Kalguksu</h4>
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/071/original/26.png?1683044080"
+                    alt="Kalguksu"
+                    width="200"
+                  />
+                  <p>
+                    A noodle soup made with handmade knife-cut noodles and often
+                    served with seafood or chicken broth
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row cuisine-dishes snacks">
+              <h3>SNACKS</h3>
+              <div class="col cuisine-dish">
+                <h4>Tteokbokki</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/055/original/12.png?1683043889"
+                  alt="Tteokbokki"
+                  width="200"
+                />
+                <p>
+                  A popular street food made from rice cakes, fish cakes, and a
+                  spicy red sauce.
+                </p>
+              </div>
+              <div class="col cuisine-dish">
+                <h4>Gimbap</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/056/original/13.png?1683043908"
+                  alt="Gimbap"
+                  width="200"
+                />
+                <p>
+                  A popular street food made from rice cakes, fish cakes, and a
+                  spicy red sauce.
+                </p>
+              </div>
+              <div class="col cuisine-dish">
+                <h4>Odeng</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/057/original/14.png?1683043919"
+                  alt="Odeng"
+                  width="200"
+                />
+                <p>
+                  Fish cakes that are typically served on skewers and boiled in
+                  a savory broth
+                </p>
+              </div>
+              <div class="col cuisine-dish">
+                <h4>Japchae</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/058/original/15.png?1683043925"
+                  alt="Japchae"
+                  width="200"
+                />
+                <p>
+                  A stir-fried noodle dish made with sweet potato starch
+                  noodles, vegetables, and meat or seafood
+                </p>
+              </div>
+              <div class="col cuisine-dish">
+                <h4>Mandu</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/059/original/16.png?1683043936"
+                  alt="Mandu"
+                  width="200"
+                />
+                <p>
+                  Korean-style dumplings that are typically filled with meat and
+                  vegetables and can be fried, steamed, or boiled
+                </p>
+              </div>
+            </div>
+
+            <div class="row cuisine-dishes desserts">
+              <h3>DESSERTS</h3>
+              <div class="col cuisine-dish">
+                <h4>HOTTEOK</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/048/original/6.png?1683043816"
+                  alt="HOTTEOK"
+                  width="150"
+                />
+                <p>
+                  A type of Korean pancake that is filled with sweet syrup,
+                  cinnamon, and nuts
+                </p>
+              </div>
+              <div class="col cuisine-dish">
+                <h4>PATBINGSU</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/049/original/7.png?1683043824"
+                  alt="PATBINGSU"
+                  width="150"
+                />
+                <p>
+                  A shaved ice dessert that is topped with sweetened red beans,
+                  fruit, and condensed milk
+                </p>
+              </div>
+              <div class="col cuisine-dish">
+                <h4>YAKGWA</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/050/original/8.png?1683043842"
+                  alt="YAKGWA"
+                  width="150"
+                />
+                <p>
+                  A traditional Korean sweet made from flour, honey, sesame oil,
+                  and rice wine, and typically shaped like a flower
+                </p>
+              </div>
+              <div class="col cuisine-dish">
+                <h4>HODO-GWAJA</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/051/original/9.png?1683043849"
+                  alt="HODO-GWAJA"
+                  width="150"
+                />
+                <p>
+                  A small, walnut-shaped pastry that is filled with sweet red
+                  bean paste
+                </p>
+              </div>
+              <div class="col cuisine-dish">
+                <h4>BUNGEOPPANG</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/053/original/10.png?1683043865"
+                  alt="BUNGEOPPANG"
+                  width="150"
+                />
+                <p>
+                  A fish-shaped pastry that is filled with sweetened red bean
+                  paste, custard or chocolate
+                </p>
+              </div>
+              <div class="col cuisine-dish">
+                <h4>SONGPYEON</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/054/original/11.png?1683043878"
+                  alt="SONGPYEON"
+                  width="150"
+                />
+                <p>
+                  A type of rice cake filled with sweet bean paste or other
+                  fillings, and shaped into a half-moon or ball shape
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        var element = document.querySelector(".map-section");
+        var position = element.getBoundingClientRect();
+
+        if (position.top < window.innerHeight && position.bottom >= 0) {
+          element.style.opacity = "1";
+        }
+      });
+
+      window.addEventListener("load", function () {
+        var intro = document.querySelector(".hero");
+        intro.classList.add("visible");
+      });
+    </script>
+  </body>
+</html>
