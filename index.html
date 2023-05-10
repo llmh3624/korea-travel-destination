@@ -28,7 +28,6 @@
   <style>
     :root {
       --primary-color: #00479f;
-      --tertiary-color: #3359ba;
       --secondary-color: #cd2e3a;
       --accent-color: white;
 
@@ -46,7 +45,7 @@
 
     h2 {
       font-size: 50px;
-      color: var(--primary-color);
+      color: var(--accent-color);
       margin: 0px;
     }
 
@@ -68,6 +67,18 @@
       margin: 0px;
     }
 
+    ul {
+      font-family: var(--accent-font-family);
+      font-size: 20px;
+      color: var(--accent-color);
+      list-style: none;
+      padding: 10px;
+    }
+
+    li {
+      padding: 5px;
+    }
+
     .nav {
       background-color: #121d13;
     }
@@ -75,6 +86,8 @@
     .nav-link {
       color: var(--accent-color);
       font-size: 25px;
+      padding: 0px 10px;
+      font-family: var(--default-font-family);
     }
 
     .nav-link:hover {
@@ -122,31 +135,30 @@
       padding: 10px;
     }
 
+    .location-information h2 {
+      color: var(--primary-color);
+    }
+
     .location-information p {
       text-align: left;
       padding-right: 100px;
     }
 
     .travel-reasons {
-      background-color: var(--primary-color);
-      padding: 10px;
+      background: linear-gradient(var(--primary-color), var(--secondary-color));
+      background-color: var(--secondary-color);
+      padding: 100px;
+    }
+
+    hr {
+      border: 2px solid white;
+      border-radius: 4px;
     }
 
     .travel-reasons h3 {
       color: var(--accent-color);
-      margin-top: 20px;
-    }
-
-    .travel-reasons ul {
-      font-family: var(--accent-font-family);
-      font-size: 15px;
-      color: var(--accent-color);
-      list-style: none;
-      padding: 5px;
-    }
-
-    .travel-reasons li {
-      padding: 5px;
+      font-size: 40px;
+      margin-top: 10px;
     }
 
     .culture-section {
@@ -172,7 +184,7 @@
       margin: 10px;
     }
 
-    .culture-places h4 {
+    .culture-places h3 {
       color: var(--secondary-color);
     }
 
@@ -199,7 +211,6 @@
     }
 
     .food-information h2 {
-      color: var(--accent-color);
       margin: 10px;
     }
 
@@ -219,7 +230,7 @@
 
     .cuisine-dish h4 {
       color: var(--accent-color);
-      border: 1px solid var(--tertiary-color);
+      border: 1px solid #3359ba;
     }
 
     .cuisine-dish p {
@@ -230,6 +241,34 @@
     .cuisine-dish img {
       border-radius: 5px;
     }
+
+    .activities-section {
+      background-color: var(--primary-color);
+      padding: 20px;
+      margin: 30px auto;
+    }
+
+    .activities-information {
+      border: 1px solid var(--accent-color);
+      padding: 20px;
+    }
+
+    .activities-information p {
+      color: var(--accent-color);
+      font-size: 20px;
+      font-weight: 400;
+      padding: 10px;
+      padding-bottom: 30px;
+    }
+
+    .korea-activity ul {
+      font-size: 17px;
+      font-weight: 300;
+      color: #9ac1f1;
+    }
+    .korea-activity li {
+      padding: 10px;
+    }
   </style>
   <body>
     <div>
@@ -238,7 +277,7 @@
           <a class="nav-link" href="#location">LOCATION</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#reasons">REASONS</a>
+          <a class="nav-link" href="#reasons">WHY</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#culture">CULTURE</a>
@@ -288,6 +327,7 @@
 
     <div id="reasons" class="travel-reasons text-center">
       <h3>Why Should South Korea be Your Next Travel Destination?</h3>
+      <hr />
       <ul>
         <li>Rich culture and history, including UNESCO World Heritage Sites</li>
         <li>
@@ -306,6 +346,147 @@
       </ul>
     </div>
 
+    <div id="activity" class="container">
+      <div class="row activities-section text-center">
+        <div class="col activities-information">
+
+          <h2>ACTIVITIES</h2>
+          <p>
+            There are many activities to do in South Korea, and here are some
+            must-do activities to add to your itinerary
+          </p>
+
+
+          <div class="row korea-activities">
+            <div class="col cultural-activity korea-activity">
+              <h3>CULTURAL</h3>
+
+              <div class="row">
+                <div class="col">
+                  <p>Attend a K-Pop concert or visit one of Korea's many music venues</p>
+                </div>
+
+                <div class="col">
+                  <p>Participate in a traditional tea ceremony</p>
+                </div>
+
+                <div class="col">
+                  <p>Learn how to make Korean pottery at a local workshop</p>
+                </div>
+
+                <div class="col">
+                  <p> Visit a traditional Korean market like Gwangjang Market in Seoul</p>
+                </div>
+
+                <div class="col">
+                  <p>Watch a traditional Korean performance, such as a Nanta show or a Pansori performanc</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row korea-activities">
+            <div class="col nature-activity korea-activity">
+              <h3>NATURE</h3>
+
+              <div class="row">
+                <div class="col">
+                  <p>
+
+                  
+                  Hike to the top of Seoraksan Mountain in Seoraksan National
+                    Park
+                    </p>
+                </div>
+
+                <div class="col">
+                  <p>
+
+                 
+                  Visit the bamboo forests and waterfalls in Juknokwon in
+                    Damyang
+                     </p>
+                </div>
+
+                <div class="col">
+                  <p>
+
+                 
+                  Walk along the trails in Boseong's green tea fields
+                   </p>
+                </div>
+
+
+                <div class="col">
+                  <p>
+
+                 
+                  Go kayaking in Jeju Island's crystal clear waters
+                   </p>
+                </div>
+
+                <div class="col">
+                  <p>
+
+                  
+                  Visit the UNESCO World Heritage site of Jeju's volcanic lava
+                    tubes
+                    </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row korea-activities">
+            <div class="col city-activity korea-activity">
+              <h3>CITY</h3>
+
+              <div class="row">
+                <div class="col">
+                  <p>
+                    Shop for Korean beauty products and fashion in
+                    <strong> Myeong-dong</strong>
+
+                  </p>
+                </div>
+
+                <div class="col">
+                  <p>
+                  Visit the Namsangol Hanok Village in Seoul to see
+                    traditional Korean houses and architecture
+                    </p>
+                </div>
+
+                <div class="col">
+                  <p>
+                  Visit the Namsan Tower a popular tourist destination in
+                    Seoul that offers incredible views of the city and
+                    surrounding areas
+                    </p>
+                </div>
+
+                <div class="col">
+                  <p>
+                  Visit Busan's Jagalchi Fish Market for fresh seafood and
+                    local delicacies
+                    </p>
+                </div>
+
+                <div class="col">
+                  <p>
+                  Walk through the Haeundae Beach area in Busan for a vibrant
+                    nightlife scene and delicious food
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="culture" class="container">
       <div class="row culture-section text-center">
         <div class="col culture-information">
@@ -317,7 +498,7 @@
 
           <div class="row culture-places">
             <div class="col culture-place">
-              <h4>SEOUL</h4>
+              <h3>SEOUL</h4>
               <p>
                 As the capital and largest city in South Korea, Seoul offers a
                 wide range of cultural experiences, including historic palaces,
@@ -330,7 +511,7 @@
               </p>
             </div>
             <div class="col culture-place">
-              <h4>JEONJU</h4>
+              <h3>JEONJU</h3>
               <p>
                 Located in the southwest region of the country, Jeonju is known
                 for its traditional culture and is often referred to as the
@@ -340,7 +521,7 @@
               </p>
             </div>
             <div class="col culture-place">
-              <h4>GYEONGJU</h4>
+              <h3>GYEONGJU</h3>
               <p>
                 This city was the capital of the ancient Silla Kingdom and has a
                 wealth of historical and cultural sites, including UNESCO World
@@ -352,7 +533,7 @@
               </p>
             </div>
             <div class="col culture-place">
-              <h4>BUSAN</h4>
+              <h3>BUSAN</h3>
               <p>
                 As the second-largest city in South Korea, Busan offers a unique
                 blend of traditional and modern culture. Visitors can explore
@@ -363,7 +544,7 @@
               </p>
             </div>
             <div class="col culture-place">
-              <h4>ANDONG</h4>
+              <h3>ANDONG</h3>
               <p>
                 This city is known for its traditional culture, including its
                 famous mask dance, <strong>Hahoe Folk Village</strong>, and
@@ -700,39 +881,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div id="activity">
-      <div class="container activities-section">
-        <h2>ACTIVITES</h2>
-        <ul>
-          <li class="activity">
-            Experience Korean nightlife in Seoul's many bars and clubs,
-            especially in areas like Hongdae and Itaewon
-          </li>
-          <li class="activity">
-            Visit a Korean-style karaoke, or "noraebang," with friends and sing
-            your heart out.
-          </li>
-          <li class="activity">
-            Go shopping in one of Korea's many shopping districts like
-            Myeongdong, Dongdaemun or Namdaemun
-          </li>
-          <li class="activity">
-            Try a Korean spa, or jjimjilbang, for a unique Korean experience
-          </li>
-          <li class="activity">
-            Attend a K-Pop concert or visit one of Korea's many music venues
-          </li>
-          <li class="activity">
-            Visit an animal cafe to play with the pets and socialize with friends
-          </li>
-          <li class="activity">
-            Go to a PC bang that internet cafes that are designed primarily for gaming
-          </li>
-
-        </ul>
       </div>
     </div>
 
