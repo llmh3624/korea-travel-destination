@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>My Dream Travel Destination | South Korea</title>
 
     <script
       src="https://kit.fontawesome.com/9a3becb4d0.js"
@@ -24,300 +24,313 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      :root {
+        --primary-color: #00479f;
+        --secondary-color: #cd2e3a;
+        --accent-color: white;
+
+        --default-font-family: "Bebas Neue", cursive;
+        --accent-font-family: "Roboto Slab", serif;
+      }
+
+      body {
+        font-family: var(--default-font-family);
+      }
+
+      h1 {
+        font-size: 45px;
+      }
+
+      h2 {
+        font-size: 50px;
+        color: var(--accent-color);
+        margin: 0px;
+      }
+
+      h3 {
+        font-size: 30px;
+        color: var(--accent-color);
+      }
+
+      h4 {
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-family: var(--accent-font-family);
+        color: var(--accent-color);
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        margin: 0px;
+      }
+
+      ul {
+        font-family: var(--accent-font-family);
+        font-size: 20px;
+        color: var(--accent-color);
+        list-style: none;
+        padding: 10px;
+      }
+
+      li {
+        padding: 5px;
+      }
+
+      .section {
+        padding: 20px;
+      }
+
+      .nav {
+        background-color: #121d13;
+      }
+
+      .nav-link {
+        color: var(--accent-color);
+        font-size: 25px;
+        padding: 0px 10px;
+        font-family: var(--default-font-family);
+      }
+
+      .nav-link:hover {
+        color: var(--secondary-color);
+      }
+
+      .hero {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/039/original/southkorea.png?1683043660);
+        background-position: center;
+        background-size: cover;
+        padding: 200px;
+        margin: 0px;
+        margin-bottom: 20px;
+
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      }
+
+      .hero.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      header {
+        color: var(--accent-color);
+        font-size: 100px;
+        background-color: rgba(201, 201, 201, 0.5);
+      }
+
+      .map-section {
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+      }
+
+      .map-south-korea {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+        height: 90%;
+      }
+
+      .location-information {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+      }
+
+      .location-information h2 {
+        color: var(--primary-color);
+      }
+
+      .location-information p {
+        color: black;
+        text-align: left;
+        padding-right: 100px;
+      }
+
+      .travel-reasons {
+        background: linear-gradient(
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        background-color: var(--secondary-color);
+        padding: 100px;
+      }
+
+      hr {
+        border: 2px solid white;
+        border-radius: 4px;
+      }
+
+      .travel-reasons h3 {
+        font-size: 40px;
+        margin-top: 10px;
+      }
+
+      .culture-section {
+        margin: 0px;
+      }
+
+      .culture-information {
+        border: 1px solid var(--secondary-color);
+        padding: 10px;
+      }
+
+      .culture-information h2 {
+        color: var(--secondary-color);
+      }
+
+      .culture-information p {
+        color: black;
+      }
+
+      .culture-places {
+        flex: 1;
+        margin: 10px;
+      }
+
+      .culture-place {
+        margin: 10px;
+      }
+
+      .culture-places h3 {
+        color: var(--secondary-color);
+      }
+
+      .culture-places p {
+        font-size: 16px;
+        font-weight: 300;
+      }
+
+      .image-place img {
+        border-radius: 2px;
+      }
+
+      #food {
+        background-color: var(--primary-color);
+      }
+
+      .food-information {
+        border: 1px solid var(--accent-color);
+        margin: 10px;
+      }
+
+      .food-information h2 {
+        margin: 10px;
+      }
+
+      .food-information p {
+        font-weight: 300;
+        margin: 10px;
+      }
+
+      .main-dish {
+        margin: 20px 0;
+      }
+
+      .cuisine-dishes {
+        margin: 20px;
+      }
+
+      .cuisine-dish h4 {
+        color: var(--accent-color);
+        border: 1px solid #3359ba;
+      }
+
+      .cuisine-dish p {
+        font-size: 14px;
+        font-weight: 200;
+      }
+      .cuisine-dish img {
+        border-radius: 5px;
+      }
+
+      .activities-section {
+        background-color: var(--primary-color);
+        margin: 20px auto 0px;
+      }
+
+      .activities-information {
+        border: 1px solid var(--accent-color);
+        padding: 20px;
+      }
+
+      .activities-information p {
+        padding: 20px 0px;
+      }
+
+      .korea-activity h3 {
+        background-color: rgb(255, 255, 255, 0.7);
+        color: var(--primary-color);
+      }
+
+      .korea-activity p {
+        font-size: 17px;
+        font-weight: 100;
+        padding: 5px 0px;
+        padding-bottom: 20px;
+      }
+
+      .activities-links {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 400;
+      }
+
+      .activities-links:hover {
+        color: var(--secondary-color);
+      }
+
+      .youtube-channels h2 {
+        color: var(--secondary-color);
+      }
+
+      .youtube-channels p {
+        color: black;
+      }
+
+      .youtube-recommendations h3 {
+        color: var(--secondary-color);
+      }
+
+      .channel-link {
+        text-decoration: none;
+      }
+
+      .channel-link h3:hover {
+        color: black;
+      }
+
+      .youtube-video {
+        width: 90%;
+        height: 100%;
+      }
+
+      footer {
+        font-size: 15px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+      }
+
+      .social-links {
+        color: var(--secondary-color);
+        text-decoration: none;
+      }
+
+      .social-media-link {
+        font-size: 30px;
+        padding: 10px;
+      }
+
+      .social-links:hover {
+        color: var(--primary-color);
+      }
+    </style>
   </head>
-  <style>
-    :root {
-      --primary-color: #00479f;
-      --secondary-color: #cd2e3a;
-      --accent-color: white;
 
-      --default-font-family: "Bebas Neue", cursive;
-      --accent-font-family: "Roboto Slab", serif;
-    }
-
-    body {
-      font-family: var(--default-font-family);
-    }
-
-    h1 {
-      font-size: 45px;
-    }
-
-    h2 {
-      font-size: 50px;
-      color: var(--accent-color);
-      margin: 0px;
-    }
-
-    h3 {
-      font-size: 30px;
-      color: var(--accent-color);
-    }
-
-    h4 {
-      font-size: 25px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-family: var(--accent-font-family);
-      color: var(--accent-color);
-      font-size: 20px;
-      font-weight: 400;
-      text-align: center;
-      margin: 0px;
-    }
-
-    ul {
-      font-family: var(--accent-font-family);
-      font-size: 20px;
-      color: var(--accent-color);
-      list-style: none;
-      padding: 10px;
-    }
-
-    li {
-      padding: 5px;
-    }
-
-    .section {
-      padding: 20px;
-    }
-
-    .nav {
-      background-color: #121d13;
-    }
-
-    .nav-link {
-      color: var(--accent-color);
-      font-size: 25px;
-      padding: 0px 10px;
-      font-family: var(--default-font-family);
-    }
-
-    .nav-link:hover {
-      color: var(--secondary-color);
-    }
-
-    .hero {
-      background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/039/original/southkorea.png?1683043660);
-      background-position: center;
-      background-size: cover;
-      padding: 200px;
-      margin: 0px;
-      margin-bottom: 20px;
-
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    }
-
-    .hero.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    header {
-      color: var(--accent-color);
-      font-size: 100px;
-      background-color: rgba(201, 201, 201, 0.3);
-    }
-
-    .map-section {
-      opacity: 0;
-      transition: opacity 2s ease-in-out;
-    }
-
-    .map-south-korea {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .location-information {
-      margin: auto;
-      width: 50%;
-      padding: 10px;
-    }
-
-    .location-information h2 {
-      color: var(--primary-color);
-    }
-
-    .location-information p {
-      color: black;
-      text-align: left;
-      padding-right: 100px;
-    }
-
-    .travel-reasons {
-      background: linear-gradient(var(--primary-color), var(--secondary-color));
-      background-color: var(--secondary-color);
-      padding: 100px;
-    }
-
-    hr {
-      border: 2px solid white;
-      border-radius: 4px;
-    }
-
-    .travel-reasons h3 {
-      font-size: 40px;
-      margin-top: 10px;
-    }
-
-    .culture-section {
-      margin: 0px;
-    }
-
-    .culture-information {
-      border: 1px solid var(--secondary-color);
-      padding: 10px;
-    }
-
-    .culture-information h2 {
-      color: var(--secondary-color);
-    }
-
-    .culture-information p {
-      color: black;
-    }
-
-    .culture-places {
-      flex: 1;
-      margin: 10px;
-    }
-
-    .culture-place {
-      margin: 10px;
-    }
-
-    .culture-places h3 {
-      color: var(--secondary-color);
-    }
-
-    .culture-places p {
-      font-size: 16px;
-      font-weight: 300;
-    }
-
-    .image-place img {
-      border-radius: 2px;
-    }
-
-    #food {
-      background-color: var(--primary-color);
-    }
-
-    .food-information {
-      border: 1px solid var(--accent-color);
-      margin: 10px;
-    }
-
-    .food-information h2 {
-      margin: 10px;
-    }
-
-    .food-information p {
-      font-weight: 300;
-      margin: 10px;
-    }
-
-    .main-dish {
-      margin: 20px 0;
-    }
-
-    .cuisine-dishes {
-      margin: 20px;
-    }
-
-    .cuisine-dish h4 {
-      color: var(--accent-color);
-      border: 1px solid #3359ba;
-    }
-
-    .cuisine-dish p {
-      font-size: 14px;
-      font-weight: 200;
-    }
-    .cuisine-dish img {
-      border-radius: 5px;
-    }
-
-    .activities-section {
-      background-color: var(--primary-color);
-      margin: 20px auto 0px;
-    }
-
-    .activities-information {
-      border: 1px solid var(--accent-color);
-      padding: 20px;
-    }
-
-    .activities-information p {
-      padding: 20px 0px;
-    }
-
-    .korea-activity h3 {
-      background-color: rgb(255, 255, 255, 0.7);
-      color: var(--primary-color);
-    }
-
-    .korea-activity p {
-      font-size: 17px;
-      font-weight: 100;
-      padding: 5px 0px;
-      padding-bottom: 20px;
-    }
-
-    .activities-links {
-      color: var(--accent-color);
-      text-decoration: none;
-      font-weight: 400;
-    }
-
-    .activities-links:hover {
-      color: var(--secondary-color);
-    }
-
-    .youtube-channels h2 {
-      color: var(--secondary-color);
-    }
-
-    .youtube-channels p {
-      color: black;
-    }
-
-    .youtube-recommendations h3 {
-      color: var(--secondary-color);
-    }
-
-    .channel-link {
-      text-decoration: none;
-    }
-
-    .channel-link h3:hover {
-      color: black;
-    }
-
-    footer {
-      font-size: 15px;
-    }
-
-    .social-links{
-      color: var(--secondary-color);
-      text-decoration: none;
-    }
-
-    .social-media-link {
-      font-size: 30px;
-      padding: 10px;
-    }
-
-    .social-links:hover {
-      color: var(--primary-color);
-    }
-  </style>
   <body>
     <div>
       <ul class="nav justify-content-center">
@@ -361,8 +374,6 @@
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/041/original/map.png?1683043720"
               class="map-south-korea"
               alt="South Korea Map"
-              width="400"
-              height="90%"
             />
           </div>
           <div class="col-6 location-information">
@@ -1000,11 +1011,9 @@
                     ><h3>KOREAN ENGLISHMAN</h3></a
                   >
                   <iframe
-                    width="400"
-                    height="250"
                     src="https://www.youtube.com/embed/uzeToMXRNAI"
+                    class="youtube-video"
                     title="YouTube video player"
-                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                   ></iframe>
@@ -1018,11 +1027,9 @@
                     ><h3>Korean Unnie</h3></a
                   >
                   <iframe
-                    width="400"
-                    height="250"
                     src="https://www.youtube.com/embed/Nj11r8kC81o"
+                    class="youtube-video"
                     title="YouTube video player"
-                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                   ></iframe>
@@ -1036,11 +1043,9 @@
                     ><h3>Sweet and Tasty TV</h3></a
                   >
                   <iframe
-                    width="400"
-                    height="250"
                     src="https://www.youtube.com/embed/_48zDYpsj5I"
+                    class="youtube-video"
                     title="YouTube video player"
-                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                   ></iframe>
@@ -1053,12 +1058,16 @@
     </div>
 
     <footer class="text-center">
-      <a href="https://www.instagram.com/laura.moragues/" target="_blank" title="Laura Moragues' Instagram"
+      <a
+        href="https://www.instagram.com/laura.moragues/"
+        target="_blank"
+        title="Laura Moragues' Instagram"
         ><i class="fa-brands fa-instagram social-links social-media-link"></i
       ></a>
       <a
         href="https://www.linkedin.com/in/liang-laura-moragues-hincapi%C3%A9/"
-        target="_blank" title="Laura Moragues' Linkedin"
+        target="_blank"
+        title="Laura Moragues' Linkedin"
         ><i class="fa-brands fa-linkedin social-links social-media-link"></i
       ></a>
       <br />
