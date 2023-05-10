@@ -61,6 +61,7 @@
 
     p {
       font-family: var(--accent-font-family);
+      color: var(--accent-color);
       font-size: 20px;
       font-weight: 400;
       text-align: center;
@@ -77,6 +78,10 @@
 
     li {
       padding: 5px;
+    }
+
+    .section {
+      padding: 20px;
     }
 
     .nav {
@@ -140,6 +145,7 @@
     }
 
     .location-information p {
+      color: black;
       text-align: left;
       padding-right: 100px;
     }
@@ -156,13 +162,11 @@
     }
 
     .travel-reasons h3 {
-      color: var(--accent-color);
       font-size: 40px;
       margin-top: 10px;
     }
 
     .culture-section {
-      padding: 20px;
       margin: 0px;
     }
 
@@ -173,6 +177,10 @@
 
     .culture-information h2 {
       color: var(--secondary-color);
+    }
+
+    .culture-information p {
+      color: black;
     }
 
     .culture-places {
@@ -201,10 +209,6 @@
       background-color: var(--primary-color);
     }
 
-    .food-section {
-      padding: 20px;
-    }
-
     .food-information {
       border: 1px solid var(--accent-color);
       margin: 10px;
@@ -215,7 +219,6 @@
     }
 
     .food-information p {
-      color: var(--accent-color);
       font-weight: 300;
       margin: 10px;
     }
@@ -234,7 +237,6 @@
     }
 
     .cuisine-dish p {
-      color: var(--accent-color);
       font-size: 14px;
       font-weight: 200;
     }
@@ -244,8 +246,7 @@
 
     .activities-section {
       background-color: var(--primary-color);
-      padding: 20px;
-      margin: 30px auto;
+      margin: 20px auto 0px;
     }
 
     .activities-information {
@@ -254,20 +255,67 @@
     }
 
     .activities-information p {
-      color: var(--accent-color);
-      font-size: 20px;
-      font-weight: 400;
-      padding: 10px;
-      padding-bottom: 30px;
+      padding: 20px 0px;
     }
 
-    .korea-activity ul {
-      font-size: 17px;
-      font-weight: 300;
-      color: #9ac1f1;
+    .korea-activity h3 {
+      background-color: rgb(255, 255, 255, 0.7);
+      color: var(--primary-color);
     }
-    .korea-activity li {
+
+    .korea-activity p {
+      font-size: 17px;
+      font-weight: 100;
+      padding: 5px 0px;
+      padding-bottom: 20px;
+    }
+
+    .activities-links {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    .activities-links:hover {
+      color: var(--secondary-color);
+    }
+
+    .youtube-channels h2 {
+      color: var(--secondary-color);
+    }
+
+    .youtube-channels p {
+      color: black;
+    }
+
+    .youtube-recommendations h3 {
+      color: var(--secondary-color);
+    }
+
+    .channel-link {
+      text-decoration: none;
+    }
+
+    .channel-link h3:hover {
+      color: black;
+    }
+
+    footer {
+      font-size: 15px;
+    }
+
+    .social-links{
+      color: var(--secondary-color);
+      text-decoration: none;
+    }
+
+    .social-media-link {
+      font-size: 30px;
       padding: 10px;
+    }
+
+    .social-links:hover {
+      color: var(--primary-color);
     }
   </style>
   <body>
@@ -280,10 +328,16 @@
           <a class="nav-link" href="#reasons">WHY</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#activity">ACTIVITIES</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#culture">CULTURE</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#food">FOOD</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#youtube">YOUTUBE</a>
         </li>
       </ul>
     </div>
@@ -347,15 +401,13 @@
     </div>
 
     <div id="activity" class="container">
-      <div class="row activities-section text-center">
+      <div class="row activities-section section text-center">
         <div class="col activities-information">
-
           <h2>ACTIVITIES</h2>
           <p>
             There are many activities to do in South Korea, and here are some
             must-do activities to add to your itinerary
           </p>
-
 
           <div class="row korea-activities">
             <div class="col cultural-activity korea-activity">
@@ -363,7 +415,10 @@
 
               <div class="row">
                 <div class="col">
-                  <p>Attend a K-Pop concert or visit one of Korea's many music venues</p>
+                  <p>
+                    Attend a K-Pop concert or visit one of Korea's many music
+                    venues
+                  </p>
                 </div>
 
                 <div class="col">
@@ -371,18 +426,25 @@
                 </div>
 
                 <div class="col">
-                  <p>Learn how to make Korean pottery at a local workshop</p>
+                  <p>
+                    Visit a traditional Korean market like
+                    <a
+                      href="https://goo.gl/maps/cR6hZK27xuQHpmxJ9"
+                      class="activities-links"
+                      target="_blank"
+                      >Gwangjang Market</a
+                    >
+                    in Seoul
+                  </p>
                 </div>
 
                 <div class="col">
-                  <p> Visit a traditional Korean market like Gwangjang Market in Seoul</p>
-                </div>
-
-                <div class="col">
-                  <p>Watch a traditional Korean performance, such as a Nanta show or a Pansori performanc</p>
+                  <p>
+                    Watch a traditional Korean performance, like a Nanta show or
+                    a Pansori performanc
+                  </p>
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -393,49 +455,54 @@
               <div class="row">
                 <div class="col">
                   <p>
-
-                  
-                  Hike to the top of Seoraksan Mountain in Seoraksan National
-                    Park
-                    </p>
+                    Hike to the top of
+                    <a
+                      href="https://goo.gl/maps/Yu5HnBTraSAw8o1JA"
+                      class="activities-links"
+                      target="_blank"
+                      >Seoraksan Mountain</a
+                    >
+                    in Seoraksan National Park
+                  </p>
                 </div>
 
                 <div class="col">
                   <p>
-
-                 
-                  Visit the bamboo forests and waterfalls in Juknokwon in
-                    Damyang
-                     </p>
+                    Visit the bamboo forests and waterfalls in
+                    <a
+                      href="https://goo.gl/maps/MgzbCKQ5GPuPtpbh7"
+                      class="activities-links"
+                      target="_blank"
+                      >Juknokwon</a
+                    >
+                    in Damyang
+                  </p>
                 </div>
 
                 <div class="col">
                   <p>
-
-                 
-                  Walk along the trails in Boseong's green tea fields
-                   </p>
-                </div>
-
-
-                <div class="col">
-                  <p>
-
-                 
-                  Go kayaking in Jeju Island's crystal clear waters
-                   </p>
+                    Walk along the trails in
+                    <a
+                      href="https://goo.gl/maps/4E6cwBwtz4VqZypr8"
+                      class="activities-links"
+                      target="_blank"
+                      >Boseong's green tea fields</a
+                    >
+                  </p>
                 </div>
 
                 <div class="col">
                   <p>
-
-                  
-                  Visit the UNESCO World Heritage site of Jeju's volcanic lava
-                    tubes
-                    </p>
+                    Visit
+                    <a
+                      href="https://goo.gl/maps/iDvnGbAd4L8XTiC88"
+                      class="activities-links"
+                      target="_blank"
+                      >Jeju's volcanic lava tubes</a
+                    >
+                  </p>
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -447,38 +514,67 @@
                 <div class="col">
                   <p>
                     Shop for Korean beauty products and fashion in
-                    <strong> Myeong-dong</strong>
-
+                    <a
+                      href="https://goo.gl/maps/UuzXpP8LdQeSa1Jv8"
+                      class="activities-links"
+                      target="_blank"
+                      >Myeong-dong</a
+                    >
                   </p>
                 </div>
 
                 <div class="col">
                   <p>
-                  Visit the Namsangol Hanok Village in Seoul to see
-                    traditional Korean houses and architecture
-                    </p>
+                    Visit the
+                    <a
+                      href="https://goo.gl/maps/cgzwgvQXgDCJMhgX9"
+                      class="activities-links"
+                      target="_blank"
+                      >Namsangol Hanok Village</a
+                    >
+                    in Seoul to see traditional Korean houses and architecture
+                  </p>
                 </div>
 
                 <div class="col">
                   <p>
-                  Visit the Namsan Tower a popular tourist destination in
-                    Seoul that offers incredible views of the city and
+                    Visit the
+                    <a
+                      href="https://goo.gl/maps/GT3EgAHZiy1cjKps5"
+                      class="activities-links"
+                      target="_blank"
+                      >Namsan Tower</a
+                    >
+                    in Seoul that offers incredible views of the city and
                     surrounding areas
-                    </p>
+                  </p>
                 </div>
 
                 <div class="col">
                   <p>
-                  Visit Busan's Jagalchi Fish Market for fresh seafood and
-                    local delicacies
-                    </p>
+                    Visit
+                    <a
+                      href="https://goo.gl/maps/XyXf54NCXxxbKyyJ6"
+                      class="activities-links"
+                      target="_blank"
+                      >Busan's Jagalchi Fish Market</a
+                    >
+                    for fresh seafood and local delicacies
+                  </p>
                 </div>
 
                 <div class="col">
                   <p>
-                  Walk through the Haeundae Beach area in Busan for a vibrant
-                    nightlife scene and delicious food
-                    </p>
+                    Walk through the
+                    <a
+                      href="https://goo.gl/maps/uHchYzrehRziDs8V9"
+                      class="activities-links"
+                      target="_blank"
+                      >Haeundae Beach</a
+                    >
+                    area in Busan for a vibrant nightlife scene and delicious
+                    food
+                  </p>
                 </div>
               </div>
             </div>
@@ -488,7 +584,7 @@
     </div>
 
     <div id="culture" class="container">
-      <div class="row culture-section text-center">
+      <div class="row culture-section section text-center">
         <div class="col culture-information">
           <h2>CULTURE</h2>
           <p>
@@ -498,7 +594,7 @@
 
           <div class="row culture-places">
             <div class="col culture-place">
-              <h3>SEOUL</h4>
+              <h3>SEOUL</h3>
               <p>
                 As the capital and largest city in South Korea, Seoul offers a
                 wide range of cultural experiences, including historic palaces,
@@ -601,7 +697,7 @@
 
     <div id="food">
       <div class="container text-center">
-        <div class="row food-section">
+        <div class="row food-section section">
           <div class="col food-information">
             <h2>FOOD</h2>
             <p>
@@ -883,6 +979,98 @@
         </div>
       </div>
     </div>
+
+    <div id="youtube">
+      <div class="row youtube-section section text-center">
+        <div class="col youtube-channels">
+          <h2>YOUTUBE CHANNELS</h2>
+          <p>
+            Here are some YouTube channels that you might find interesting and
+            informative about Korean culture
+          </p>
+
+          <div class="row">
+            <div class="col">
+              <div class="row youtube-recommendations section">
+                <div class="col">
+                  <a
+                    href="https://www.youtube.com/@koreanenglishman"
+                    class="channel-link"
+                    target="_blank"
+                    ><h3>KOREAN ENGLISHMAN</h3></a
+                  >
+                  <iframe
+                    width="400"
+                    height="250"
+                    src="https://www.youtube.com/embed/uzeToMXRNAI"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+
+                <div class="col">
+                  <a
+                    href="https://www.youtube.com/@KoreanUnnie"
+                    class="channel-link"
+                    target="_blank"
+                    ><h3>Korean Unnie</h3></a
+                  >
+                  <iframe
+                    width="400"
+                    height="250"
+                    src="https://www.youtube.com/embed/Nj11r8kC81o"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+
+                <div class="col">
+                  <a
+                    href="https://www.youtube.com/@sweetandtastyTV"
+                    class="channel-link"
+                    target="_blank"
+                    ><h3>Sweet and Tasty TV</h3></a
+                  >
+                  <iframe
+                    width="400"
+                    height="250"
+                    src="https://www.youtube.com/embed/_48zDYpsj5I"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center">
+      <a href="https://www.instagram.com/laura.moragues/" target="_blank" title="Laura Moragues' Instagram"
+        ><i class="fa-brands fa-instagram social-links social-media-link"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/liang-laura-moragues-hincapi%C3%A9/"
+        target="_blank" title="Laura Moragues' Linkedin"
+        ><i class="fa-brands fa-linkedin social-links social-media-link"></i
+      ></a>
+      <br />
+      Coded by
+      <a
+        href="https://heroic-palmier-0df45c.netlify.app/"
+        class="social-links"
+        target="_blank"
+        title="Laura Moragues' Personal Portfolio"
+        >Laura Moragues</a
+      >
+    </footer>
 
     <script>
       window.addEventListener("scroll", function () {
