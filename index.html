@@ -24,10 +24,12 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
     <style>
       :root {
         --primary-color: #00479f;
         --secondary-color: #cd2e3a;
+        --tertiary-color: #121d13;
         --accent-color: white;
 
         --default-font-family: "Bebas Neue", cursive;
@@ -51,6 +53,7 @@
       h3 {
         font-size: 30px;
         color: var(--accent-color);
+        text-decoration: none;
       }
 
       h4 {
@@ -62,21 +65,17 @@
         font-family: var(--accent-font-family);
         color: var(--accent-color);
         font-size: 20px;
-        font-weight: 400;
+        font-weight: 300;
         text-align: center;
         margin: 0px;
       }
 
-      ul {
-        font-family: var(--accent-font-family);
-        font-size: 20px;
-        color: var(--accent-color);
-        list-style: none;
-        padding: 10px;
+      a {
+        text-decoration: none;
       }
 
-      li {
-        padding: 5px;
+       img {
+        border-radius: 4px;
       }
 
       .section {
@@ -84,14 +83,13 @@
       }
 
       .nav {
-        background-color: #121d13;
+        background-color: var(--tertiary-color);
       }
 
       .nav-link {
         color: var(--accent-color);
         font-size: 25px;
         padding: 0px 10px;
-        font-family: var(--default-font-family);
       }
 
       .nav-link:hover {
@@ -119,7 +117,7 @@
       header {
         color: var(--accent-color);
         font-size: 100px;
-        background-color: rgba(201, 201, 201, 0.5);
+        background-color: rgba(201, 201, 201, 0.4);
       }
 
       .map-section {
@@ -146,9 +144,10 @@
       }
 
       .location-information p {
-        color: black;
+        color: var(--tertiary-color);
         text-align: left;
         padding-right: 100px;
+        font-weight: 400;
       }
 
       .travel-reasons {
@@ -156,18 +155,20 @@
           var(--primary-color),
           var(--secondary-color)
         );
-        background-color: var(--secondary-color);
         padding: 100px;
       }
 
-      hr {
-        border: 2px solid white;
-        border-radius: 4px;
+      .travel-reasons h2 {
+        border-bottom: 1px solid var(--accent-color);
+        margin: 10px auto;
       }
 
-      .travel-reasons h3 {
-        font-size: 40px;
-        margin-top: 10px;
+      .travel-reasons ul {
+        list-style: none;
+      }
+
+      .travel-reasons p {
+        padding: 10px;
       }
 
       .culture-section {
@@ -184,7 +185,7 @@
       }
 
       .culture-information p {
-        color: black;
+        color: var(--tertiary-color);
       }
 
       .culture-places {
@@ -202,11 +203,11 @@
 
       .culture-places p {
         font-size: 16px;
-        font-weight: 300;
       }
 
-      .image-place img {
-        border-radius: 2px;
+      .image-place {
+        width: 100%;
+        margin: 10px auto;
       }
 
       #food {
@@ -223,7 +224,6 @@
       }
 
       .food-information p {
-        font-weight: 300;
         margin: 10px;
       }
 
@@ -244,9 +244,7 @@
         font-size: 14px;
         font-weight: 200;
       }
-      .cuisine-dish img {
-        border-radius: 5px;
-      }
+     
 
       .activities-section {
         background-color: var(--primary-color);
@@ -271,17 +269,12 @@
         font-size: 17px;
         font-weight: 100;
         padding: 5px 0px;
-        padding-bottom: 20px;
+        padding-bottom: 15px;
       }
 
       .activities-links {
         color: var(--accent-color);
-        text-decoration: none;
         font-weight: 400;
-      }
-
-      .activities-links:hover {
-        color: var(--secondary-color);
       }
 
       .youtube-channels h2 {
@@ -289,35 +282,32 @@
       }
 
       .youtube-channels p {
-        color: black;
+        color: var(--tertiary-color);
       }
 
       .youtube-recommendations h3 {
         color: var(--secondary-color);
       }
 
-      .channel-link {
-        text-decoration: none;
-      }
-
       .channel-link h3:hover {
-        color: black;
+        color: var(--tertiary-color);
       }
 
       .youtube-video {
         width: 90%;
-        height: 100%;
+        height: 120%;
+        border: 2px solid var(--secondary-color);
+        border-radius: 3px;
       }
 
       footer {
-        font-size: 15px;
+        font-size: 20px;
         padding-top: 50px;
         padding-bottom: 10px;
       }
 
       .social-links {
         color: var(--secondary-color);
-        text-decoration: none;
       }
 
       .social-media-link {
@@ -325,8 +315,8 @@
         padding: 10px;
       }
 
-      .social-links:hover {
-        color: var(--primary-color);
+      .links:hover {
+        color: var(--tertiary-color);
       }
     </style>
   </head>
@@ -391,23 +381,30 @@
     </div>
 
     <div id="reasons" class="travel-reasons text-center">
-      <h3>Why Should South Korea be Your Next Travel Destination?</h3>
-      <hr />
+      <h2>Why Should South Korea be Your Next Travel Destination?</h2>
       <ul>
-        <li>Rich culture and history, including UNESCO World Heritage Sites</li>
         <li>
-          Delicious and varied cuisine, with must-try dishes like Korean
-          barbecue
+          <p>Rich culture and history, including UNESCO World Heritage Sites</p>
         </li>
         <li>
-          Modern and vibrant cities with excellent shopping, nightlife, and
-          entertainment options
+          <p>
+            Delicious and varied cuisine, with must-try dishes like Korean
+            barbecue
+          </p>
         </li>
         <li>
-          Beautiful natural scenery, including beaches, mountains, and national
-          parks
+          <p>
+            Modern and vibrant cities with excellent shopping, nightlife, and
+            entertainment options
+          </p>
         </li>
-        <li>Convenient and safe transportation and a low crime rate</li>
+        <li>
+          <p>
+            Beautiful natural scenery, including beaches, mountains, and
+            national parks
+          </p>
+        </li>
+        <li><p>Convenient and safe transportation and a low crime rate</p></li>
       </ul>
     </div>
 
@@ -441,7 +438,7 @@
                     Visit a traditional Korean market like
                     <a
                       href="https://goo.gl/maps/cR6hZK27xuQHpmxJ9"
-                      class="activities-links"
+                      class="activities-links links"
                       target="_blank"
                       >Gwangjang Market</a
                     >
@@ -469,7 +466,7 @@
                     Hike to the top of
                     <a
                       href="https://goo.gl/maps/Yu5HnBTraSAw8o1JA"
-                      class="activities-links"
+                      class="activities-links links"
                       target="_blank"
                       >Seoraksan Mountain</a
                     >
@@ -482,7 +479,7 @@
                     Visit the bamboo forests and waterfalls in
                     <a
                       href="https://goo.gl/maps/MgzbCKQ5GPuPtpbh7"
-                      class="activities-links"
+                      class="activities-links links"
                       target="_blank"
                       >Juknokwon</a
                     >
@@ -495,7 +492,7 @@
                     Walk along the trails in
                     <a
                       href="https://goo.gl/maps/4E6cwBwtz4VqZypr8"
-                      class="activities-links"
+                      class="activities-links links"
                       target="_blank"
                       >Boseong's green tea fields</a
                     >
@@ -507,7 +504,7 @@
                     Visit
                     <a
                       href="https://goo.gl/maps/iDvnGbAd4L8XTiC88"
-                      class="activities-links"
+                      class="activities-links links"
                       target="_blank"
                       >Jeju's volcanic lava tubes</a
                     >
@@ -527,7 +524,7 @@
                     Shop for Korean beauty products and fashion in
                     <a
                       href="https://goo.gl/maps/UuzXpP8LdQeSa1Jv8"
-                      class="activities-links"
+                      class="activities-links links"
                       target="_blank"
                       >Myeong-dong</a
                     >
@@ -539,7 +536,7 @@
                     Visit the
                     <a
                       href="https://goo.gl/maps/cgzwgvQXgDCJMhgX9"
-                      class="activities-links"
+                      class="activities-links links"
                       target="_blank"
                       >Namsangol Hanok Village</a
                     >
@@ -552,7 +549,7 @@
                     Visit the
                     <a
                       href="https://goo.gl/maps/GT3EgAHZiy1cjKps5"
-                      class="activities-links"
+                      class="activities-links links"
                       target="_blank"
                       >Namsan Tower</a
                     >
@@ -566,7 +563,7 @@
                     Visit
                     <a
                       href="https://goo.gl/maps/XyXf54NCXxxbKyyJ6"
-                      class="activities-links"
+                      class="activities-links links"
                       target="_blank"
                       >Busan's Jagalchi Fish Market</a
                     >
@@ -579,7 +576,7 @@
                     Walk through the
                     <a
                       href="https://goo.gl/maps/uHchYzrehRziDs8V9"
-                      class="activities-links"
+                      class="activities-links links"
                       target="_blank"
                       >Haeundae Beach</a
                     >
@@ -606,6 +603,11 @@
           <div class="row culture-places">
             <div class="col culture-place">
               <h3>SEOUL</h3>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/040/original/seoul.png?1683043691"
+                alt="Seoul"
+                class="image-place"
+              />
               <p>
                 As the capital and largest city in South Korea, Seoul offers a
                 wide range of cultural experiences, including historic palaces,
@@ -619,6 +621,11 @@
             </div>
             <div class="col culture-place">
               <h3>JEONJU</h3>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/043/original/jeonju.png?1683043746"
+                alt="Jeonju"
+                class="image-place"
+              />
               <p>
                 Located in the southwest region of the country, Jeonju is known
                 for its traditional culture and is often referred to as the
@@ -629,6 +636,11 @@
             </div>
             <div class="col culture-place">
               <h3>GYEONGJU</h3>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/044/original/gyeongju.png?1683043759"
+                alt="Gyeongyu"
+                class="image-place"
+              />
               <p>
                 This city was the capital of the ancient Silla Kingdom and has a
                 wealth of historical and cultural sites, including UNESCO World
@@ -641,6 +653,11 @@
             </div>
             <div class="col culture-place">
               <h3>BUSAN</h3>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/046/original/busan.png?1683043781"
+                alt="Busan"
+                class="image-place"
+              />
               <p>
                 As the second-largest city in South Korea, Busan offers a unique
                 blend of traditional and modern culture. Visitors can explore
@@ -652,6 +669,12 @@
             </div>
             <div class="col culture-place">
               <h3>ANDONG</h3>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/047/original/andong.png?1683043788"
+                alt="Andong"
+                class="image-place"
+              />
+
               <p>
                 This city is known for its traditional culture, including its
                 famous mask dance, <strong>Hahoe Folk Village</strong>, and
@@ -659,47 +682,6 @@
                 ceremonies and try their hand at traditional crafts like pottery
                 and paper-making.
               </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="row culture-places">
-                <div class="col image-place">
-                  <img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/040/original/seoul.png?1683043691"
-                    alt="Seoul"
-                    width="200"
-                  />
-                </div>
-                <div class="col image-place">
-                  <img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/043/original/jeonju.png?1683043746"
-                    alt="Jeonju"
-                    width="200"
-                  />
-                </div>
-                <div class="col image-place">
-                  <img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/044/original/gyeongju.png?1683043759"
-                    alt="Gyeongyu"
-                    width="200"
-                  />
-                </div>
-                <div class="col image-place">
-                  <img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/046/original/busan.png?1683043781"
-                    alt="Busan"
-                    width="200"
-                  />
-                </div>
-                <div class="col image-place">
-                  <img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/047/original/andong.png?1683043788"
-                    alt="Andong"
-                    width="200"
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1008,13 +990,12 @@
                     href="https://www.youtube.com/@koreanenglishman"
                     class="channel-link"
                     target="_blank"
-                    ><h3>KOREAN ENGLISHMAN</h3></a
+                    ><h3 class="links">KOREAN ENGLISHMAN</h3></a
                   >
                   <iframe
                     src="https://www.youtube.com/embed/uzeToMXRNAI"
                     class="youtube-video"
                     title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                   ></iframe>
                 </div>
@@ -1024,13 +1005,12 @@
                     href="https://www.youtube.com/@KoreanUnnie"
                     class="channel-link"
                     target="_blank"
-                    ><h3>Korean Unnie</h3></a
+                    ><h3 class="links">Korean Unnie</h3></a
                   >
                   <iframe
                     src="https://www.youtube.com/embed/Nj11r8kC81o"
                     class="youtube-video"
                     title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                   ></iframe>
                 </div>
@@ -1040,13 +1020,12 @@
                     href="https://www.youtube.com/@sweetandtastyTV"
                     class="channel-link"
                     target="_blank"
-                    ><h3>Sweet and Tasty TV</h3></a
+                    ><h3 class="links">Sweet and Tasty TV</h3></a
                   >
                   <iframe
                     src="https://www.youtube.com/embed/_48zDYpsj5I"
                     class="youtube-video"
                     title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                   ></iframe>
                 </div>
@@ -1062,19 +1041,23 @@
         href="https://www.instagram.com/laura.moragues/"
         target="_blank"
         title="Laura Moragues' Instagram"
-        ><i class="fa-brands fa-instagram social-links social-media-link"></i
+        ><i
+          class="fa-brands fa-instagram social-links links social-media-link"
+        ></i
       ></a>
       <a
         href="https://www.linkedin.com/in/liang-laura-moragues-hincapi%C3%A9/"
         target="_blank"
         title="Laura Moragues' Linkedin"
-        ><i class="fa-brands fa-linkedin social-links social-media-link"></i
+        ><i
+          class="fa-brands fa-linkedin social-links links social-media-link"
+        ></i
       ></a>
       <br />
       Coded by
       <a
         href="https://heroic-palmier-0df45c.netlify.app/"
-        class="social-links"
+        class="social-links links"
         target="_blank"
         title="Laura Moragues' Personal Portfolio"
         >Laura Moragues</a
