@@ -27,8 +27,8 @@
 
     <style>
       :root {
-        --primary-color: #00479f;
-        --secondary-color: #cd2e3a;
+        --primary-color: #0245a2;
+        --secondary-color: #ce2937;
         --tertiary-color: #121d13;
         --accent-color: white;
 
@@ -72,6 +72,11 @@
 
       a {
         text-decoration: none;
+        color: var(--tertiary-color);
+      }
+
+      ul{
+        list-style: none;
       }
 
       img {
@@ -161,12 +166,9 @@
 
       .travel-reasons h2 {
         border-bottom: 1px solid var(--accent-color);
-        margin: 10px auto;
+        margin: 20px auto;
       }
 
-      .travel-reasons ul {
-        list-style: none;
-      }
 
       .travel-reasons p {
         padding: 10px;
@@ -229,7 +231,7 @@
         margin: 10px;
       }
 
-      .culture-places h3 {
+      .culture-places a h3 {
         color: var(--secondary-color);
       }
 
@@ -257,10 +259,7 @@
 
       .food-information p {
         margin: 10px;
-      }
 
-      .main-dish {
-        margin: 20px 0;
       }
 
       .cuisine-dishes {
@@ -275,6 +274,18 @@
       .cuisine-dish p {
         font-size: 14px;
         font-weight: 200;
+      }
+
+      .main-dish img {
+        width: 200px;
+      }
+
+      .snacks img {
+        width: 250px;
+      }
+
+      .desserts img {
+        width: 150px;
       }
 
       .youtube-channels h2 {
@@ -302,7 +313,7 @@
 
       footer {
         font-size: 20px;
-        padding-top: 50px;
+        padding-top: 80px;
         padding-bottom: 10px;
       }
 
@@ -317,6 +328,7 @@
 
       .links:hover {
         color: var(--tertiary-color);
+        font-weight: 600;
       }
     </style>
   </head>
@@ -361,7 +373,7 @@
         <div class="row">
           <div class="col-6 map-section">
             <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/041/original/map.png?1683043720"
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/081/921/original/mapa.png?1684080442"
               class="map-south-korea"
               alt="South Korea Map"
             />
@@ -602,7 +614,10 @@
 
           <div class="row culture-places">
             <div class="col culture-place">
-              <h3>SEOUL</h3>
+              <a href="https://goo.gl/maps/9ARga1b4PPMzZ1Gf9" target="_blank"
+                ><h3 class="links">SEOUL</h3></a
+              >
+
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/040/original/seoul.png?1683043691"
                 alt="Seoul"
@@ -613,14 +628,28 @@
                 wide range of cultural experiences, including historic palaces,
                 museums, and traditional markets. Some must-visit cultural
                 attractions include
-                <strong>Gyeongbokgung Palace</strong>,
-                <strong>Changdeokgung Palace</strong>,
-                <strong>the National Museum of Korea</strong>, and
-                <strong>Insadong antique street</strong>.
+                <a href="https://goo.gl/maps/4yz8y8Cy4vhsoe5q8" target="_blank">
+                  <strong class="links">Gyeongbokgung Palace</strong></a
+                >,
+
+                <a href="https://goo.gl/maps/3BWoMCnR5121yu3w6" target="_blank">
+                  <strong class="links">Changdeokgung Palace</strong></a
+                >, the
+
+                <a href="https://goo.gl/maps/ZaMLgt5R7BpctJHC9" target="_blank">
+                  <strong class="links">National Museum of Korea</strong></a
+                >, and
+
+                <a href="https://goo.gl/maps/suDPMUK4gg67FQKG6" target="_blank">
+                  <strong class="links">Insadong Antique Street</strong></a
+                >.
               </p>
             </div>
             <div class="col culture-place">
-              <h3>JEONJU</h3>
+              <a href="https://goo.gl/maps/moDc1ZgMMfHBV7Se6" target="_blank"
+                ><h3 class="links">JEONJU</h3></a
+              >
+
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/043/original/jeonju.png?1683043746"
                 alt="Jeonju"
@@ -630,12 +659,16 @@
                 Located in the southwest region of the country, Jeonju is known
                 for its traditional culture and is often referred to as the
                 "spiritual capital of Korea." Visitors can explore the
-                <strong>Jeonju Hanok Village</strong>, where traditional Korean
-                houses and cultural experiences are on display.
+                <a href="https://goo.gl/maps/TuVS5knttigQjrDBA" target="_blank">
+                  <strong class="links">Jeonju Hanok Village</strong></a
+                >, where traditional Korean houses and cultural experiences are
+                on display.
               </p>
             </div>
             <div class="col culture-place">
-              <h3>GYEONGJU</h3>
+              <a href="https://goo.gl/maps/2SY1VX9Sr5tBgMVw7" target="_blank"
+                ><h3 class="links">GYEONGJU</h3></a
+              >
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/044/original/gyeongju.png?1683043759"
                 alt="Gyeongyu"
@@ -645,14 +678,22 @@
                 This city was the capital of the ancient Silla Kingdom and has a
                 wealth of historical and cultural sites, including UNESCO World
                 Heritage Sites such as
-                <strong>Bulguksa Temple</strong> and
-                <strong> SeokguramGrotto </strong>. Gyeongju is also home to the
-                <strong>Gyeongju National Museum</strong>, which features
-                exhibits on Korean history and culture.
+                <a href="https://goo.gl/maps/Byw5U1mD25Mv1tEd9" target="_blank">
+                  <strong class="links">Bulguksa Temple</strong></a
+                >
+                and
+                <a href="https://goo.gl/maps/x7n5RYgGehdH9cd28" target="_blank">
+                  <strong class="links">Seokguram Grotto</strong></a
+                >. Gyeongju is also home to the
+                <a href="https://goo.gl/maps/d6cQ2kbUxHy8S85k6" target="_blank">
+                  <strong class="links">Gyeongju National Museum</strong></a
+                >, which features exhibits on Korean history and culture.
               </p>
             </div>
             <div class="col culture-place">
-              <h3>BUSAN</h3>
+              <a href="https://goo.gl/maps/sJaqnnRtf7rAzM2b6" target="_blank"
+                ><h3 class="links">BUSAN</h3></a
+              >
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/046/original/busan.png?1683043781"
                 alt="Busan"
@@ -661,14 +702,20 @@
               <p>
                 As the second-largest city in South Korea, Busan offers a unique
                 blend of traditional and modern culture. Visitors can explore
-                the <strong>Gamcheon Culture Village</strong>, a hillside
-                neighborhood with colorful houses and art installations, and
-                visit the <strong>Busan Museum of Art</strong>, which showcases
-                contemporary Korean art.
+                the
+                <a href="https://goo.gl/maps/o4EoifnNqiUHy6Qw9" target="_blank">
+                  <strong class="links">Gamcheon Culture Village</strong></a
+                >, a hillside neighborhood with colorful houses and art
+                installations, and visit the
+                <a href="https://goo.gl/maps/EvscFUwQNfmsGHSq7" target="_blank">
+                  <strong class="links">Busan Museum of Art</strong></a
+                >, which showcases contemporary Korean art.
               </p>
             </div>
             <div class="col culture-place">
-              <h3>ANDONG</h3>
+              <a href="https://goo.gl/maps/onBfSBsD7pD88V8u9" target="_blank"
+                ><h3 class="links">ANDONG</h3></a
+              >
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/047/original/andong.png?1683043788"
                 alt="Andong"
@@ -677,10 +724,12 @@
 
               <p>
                 This city is known for its traditional culture, including its
-                famous mask dance, <strong>Hahoe Folk Village</strong>, and
-                traditional cuisine. Visitors can also experience Korean tea
-                ceremonies and try their hand at traditional crafts like pottery
-                and paper-making.
+                famous mask dance,
+                <a href="https://goo.gl/maps/15X5Mi5wPMzh8YhB9" target="_blank">
+                  <strong class="links">Hahoe Folk Village</strong></a
+                >, and traditional cuisine. Visitors can also experience Korean
+                tea ceremonies and try their hand at traditional crafts like
+                pottery and paper-making.
               </p>
             </div>
           </div>
@@ -696,82 +745,74 @@
             <p>
               South Korean cuisine is known for its bold flavors, vibrant
               colors, and diverse ingredients. Here are some popular South
-              Korean dishes you should try when visiting:
+              Korean dishes you should try when visiting
             </p>
 
-            <div class="cuisine-dishes">
-              <div class="row main-dish">
-                <h3>MAIN-DISHES</h3>
-                <div class="col cuisine-dish">
-                  <h4>Korean Fried Chicken</h4>
-                  <img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/060/original/17.png?1683043958"
-                    alt="Korean Fried Chicken"
-                    width="200"
-                  />
-                  <p>
-                    A crispy and juicy fried chicken dish coated in a sweet and
-                    spicy sauce
-                  </p>
-                </div>
-                <div class="col cuisine-dish">
-                  <h4>Bulgogi</h4>
-                  <img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/061/original/18.png?1683043969"
-                    alt="Bulgogi"
-                    width="200"
-                  />
-                  <p>
-                    Thinly sliced beef marinated in a sweet and savory sauce,
-                    and grilled or stir-fried
-                  </p>
-                </div>
-
-                <div class="col cuisine-dish">
-                  <h4>Dakgalbi</h4>
-                  <img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/062/original/19.png?1683043983"
-                    alt="Dakgalbi"
-                    width="200"
-                  />
-                  <p>
-                    A spicy stir-fried chicken dish made with vegetables and a
-                    spicy sauce
-                  </p>
-                </div>
-                <div class="col cuisine-dish">
-                  <h4>Haemul Pajeon</h4>
-                  <img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/065/original/20.png?1683043997"
-                    alt="Haemul Pajeon"
-                    width="200"
-                  />
-                  <p>
-                    A savory pancake made with scallions and seafood such as
-                    shrimp or squid
-                  </p>
-                </div>
-                <div class="col cuisine-dish">
-                  <h4>Jjolmyeon</h4>
-                  <img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/066/original/21.png?1683044012"
-                    alt="Jjolmyeon"
-                    width="200"
-                  />
-                  <p>
-                    A type of chewy, cold noodle dish that is often served with
-                    a spicy sauce and vegetables
-                  </p>
-                </div>
+            <div class="row cuisine-dishes main-dish">
+              <h3>MAIN-DISHES</h3>
+              <div class="col cuisine-dish">
+                <h4>Korean Fried Chicken</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/060/original/17.png?1683043958"
+                  alt="Korean Fried Chicken"
+                />
+                <p>
+                  A crispy and juicy fried chicken dish coated in a sweet and
+                  spicy sauce
+                </p>
+              </div>
+              <div class="col cuisine-dish">
+                <h4>Bulgogi</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/061/original/18.png?1683043969"
+                  alt="Bulgogi"
+                />
+                <p>
+                  Thinly sliced beef marinated in a sweet and savory sauce, and
+                  grilled or stir-fried
+                </p>
               </div>
 
-              <div class="row main-dish">
+              <div class="col cuisine-dish">
+                <h4>Dakgalbi</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/062/original/19.png?1683043983"
+                  alt="Dakgalbi"
+                />
+                <p>
+                  A spicy stir-fried chicken dish made with vegetables and a
+                  spicy sauce
+                </p>
+              </div>
+              <div class="col cuisine-dish">
+                <h4>KOREAN BBQ</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/081/973/original/28.png?1684094871"
+                  alt="Korean BBQ"
+                />
+                <p>
+                  A cuisine where meat is grilled and served with lettuce and
+                  side dishes
+                </p>
+              </div>
+              <div class="col cuisine-dish">
+                <h4>Jjolmyeon</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/066/original/21.png?1683044012"
+                  alt="Jjolmyeon"
+                />
+                <p>
+                  A type of chewy, cold noodle dish that is often served with a
+                  spicy sauce and vegetables
+                </p>
+              </div>
+
+              <div class="row cuisine-dishes main-dish">
                 <div class="col cuisine-dish">
                   <h4>Galbi-tang</h4>
                   <img
                     src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/067/original/22.png?1683044024"
                     alt="Galbi-tang"
-                    width="200"
                   />
                   <p>
                     A beef short rib soup that is typically simmered for hours
@@ -783,7 +824,6 @@
                   <img
                     src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/068/original/23.png?1683044039"
                     alt="Sundubu-jjigae"
-                    width="200"
                   />
                   <p>
                     A spicy tofu stew that is typically served with rice and
@@ -795,7 +835,6 @@
                   <img
                     src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/069/original/24.png?1683044053"
                     alt="Samgyetang"
-                    width="200"
                   />
                   <p>
                     A chicken soup with ginseng, garlic, and other medicinal
@@ -807,7 +846,6 @@
                   <img
                     src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/070/original/25.png?1683044067"
                     alt="Kimchi-jjigae"
-                    width="200"
                   />
                   <p>
                     A spicy stew made with kimchi, pork, tofu, and other
@@ -819,7 +857,6 @@
                   <img
                     src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/071/original/26.png?1683044080"
                     alt="Kalguksu"
-                    width="200"
                   />
                   <p>
                     A noodle soup made with handmade knife-cut noodles and often
@@ -836,7 +873,6 @@
                 <img
                   src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/055/original/12.png?1683043889"
                   alt="Tteokbokki"
-                  width="200"
                 />
                 <p>
                   A popular street food made from rice cakes, fish cakes, and a
@@ -848,7 +884,6 @@
                 <img
                   src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/056/original/13.png?1683043908"
                   alt="Gimbap"
-                  width="200"
                 />
                 <p>
                   A popular street food made from rice cakes, fish cakes, and a
@@ -860,7 +895,6 @@
                 <img
                   src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/057/original/14.png?1683043919"
                   alt="Odeng"
-                  width="200"
                 />
                 <p>
                   Fish cakes that are typically served on skewers and boiled in
@@ -868,11 +902,21 @@
                 </p>
               </div>
               <div class="col cuisine-dish">
+                <h4>KIMCHI</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/081/972/original/27.png?1684094860"
+                  alt="Kimchi"
+                />
+                <p>
+                  Salted and fermented vegetables, known for its tangy, spicy,
+                  and slightly sour taste and health benefits.
+                </p>
+              </div>
+              <div class="col cuisine-dish">
                 <h4>Japchae</h4>
                 <img
                   src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/058/original/15.png?1683043925"
                   alt="Japchae"
-                  width="200"
                 />
                 <p>
                   A stir-fried noodle dish made with sweet potato starch
@@ -884,11 +928,22 @@
                 <img
                   src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/059/original/16.png?1683043936"
                   alt="Mandu"
+                />
+                <p>
+                  Korean-style dumplings that are filled with meat and
+                  vegetables and are fried, steamed, or boiled
+                </p>
+              </div>
+              <div class="col cuisine-dish">
+                <h4>Haemul Pajeon</h4>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/065/original/20.png?1683043997"
+                  alt="Haemul Pajeon"
                   width="200"
                 />
                 <p>
-                  Korean-style dumplings that are typically filled with meat and
-                  vegetables and can be fried, steamed, or boiled
+                  A savory pancake made with scallions and seafood such as
+                  shrimp or squid
                 </p>
               </div>
             </div>
@@ -943,6 +998,7 @@
                   bean paste
                 </p>
               </div>
+
               <div class="col cuisine-dish">
                 <h4>BUNGEOPPANG</h4>
                 <img
